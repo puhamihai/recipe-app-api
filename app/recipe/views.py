@@ -12,7 +12,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
     serializer_class = serializers.RecipeSerializer
     queryset = Recipe.objects.all()
-    authentication_classses = [TokenAuthentication]
+    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
@@ -22,6 +22,6 @@ class RecipeViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         """Return the serializer class for request"""
         if self.action == 'list':
-            return serializers.RecipeDetailSerializer
+            return serializers.RecipeSerializer
 
         return self.serializer_class

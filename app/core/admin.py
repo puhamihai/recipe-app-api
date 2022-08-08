@@ -35,6 +35,7 @@ class UserAdmin(BaseUserAdmin):
                 'password1',
                 'password2',
                 'name',
+                'is_active',
                 'is_staff',
                 'is_superuser',
             )
